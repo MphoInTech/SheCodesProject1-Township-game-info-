@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Township Game</title>
+    <style>
+      div{
+        background: linear-gradient(to right, #f5f5dc, #fffdd0);
+        padding: 20px;
+      }
+      h1 {
+        text-align: center;
+        font-size: 60px;
+        color: #497a2eff; 
+        font-family: 'Georgia', serif;
+      }
+      h2 {
+        text-align: center;
+        border: 2px dotted #a35c03;
+        border-radius: 5px;
+        background-color: #fff5e1;
+        margin: 20px 20px;
+        padding: 15px;
+        font-size:40px;
+        color: #d97404;
+        font-family: 'Arial Black', sans-serif;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        width: 400px;
+        border-radius: 5px;
+        max-width: 100%;
+      }
+      h3 {
+        text-align: center;
+        color: #5a6e3e; 
+        font-family: 'Arial', sans-serif;
+        font-size: 30px;
+        text-decoration: underline;
+      }
+      p {
+        line-height: 1.5;
+        color: #3b3b3b; 
+        font-family: 'Verdana', sans-serif;
+        text-align: center;
+        font-size: 15px;
+      }
+      .wikipediaLink {
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
+        text-decoration: none;
+        transition: all 200ms ease-in-out;
+        color: #1b7a14;
+        font-size: 20px;
+      }
+      .wikipediaLink:hover {
+        cursor: pointer;
+        text-decoration: underline;
+        color: #6cdb64ff; 
+      }
+      ul {
+        text-align: center;
+        list-style: none;
+        padding: 0;
+      }
+      a {
+        text-decoration: none;
+        color: #135e91ff;
+        font-weight: bold;
+        transition: all 200ms ease-in-out;
+      }
+      li {
+        text-align: center;
+        display: inline;
+        margin-right: 15px;
+      }
+      a:hover{
+        text-decoration: underline; 
+        color: #78c6faff;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        transition: all 200ms ease-in-out;
+        padding: 30px 50px;
+        border: none;
+        background-color: #d97404;
+        color: #fff5e1;
+        font-weight: bold;
+        font-size: 15px;
+        font-family: 'Verdana', sans-serif;
+        border-radius: 5px;
+        box-shadow: 2px 4px lightgray;
+
+      }
+      button:hover {
+        cursor: pointer;
+        background-color: #fff5e1;
+        color: #d97404;
+      }
+      .acknowledgments{
+        font-family: monospace;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>🎮I love gaming!✨</h1>
+      <h2>🐮My favourite game is Township🚜</h2>
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/018/original/township-pc-full-version.jpg?1754943272"
+        alt="Township game"
+      />
+      <h3><strong>📖About Township🌻</strong></h3>
+      <p>
+        Township is a casual farming and city-building game developed and
+        launched on multiple platforms by Playrix in which players develop
+        starter towns by building factories, harvesting crops, and creating
+        goods. The main goal of the game is to link one independent agriculture
+        operation into a complete set of industrial chains, increase income,
+        expand the territory, and make your town more prosperous by increasing
+        the population.
+      </p>
+      <a
+        href="https://en.wikipedia.org/wiki/Township_(video_game)"
+        class="wikipediaLink" 
+        target="_blank"
+        ><em> Learn more on Wikipedia</em></a
+      ><br />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/021/original/30347894148_04b33018e5_z.jpg?1754944758"
+        alt="Township screenshot"
+      />
+      <ul>
+        <li>
+          <a href="https://apps.apple.com/us/app/township/id638689075"
+            target="_blank"
+            ><span>Download on App Store (iOS)</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://play.google.com/store/apps/details?id=com.playrix.township&hl=en"
+            target="_blank"
+            ><span>Download on Google Play (Andriod)</span></a
+          >
+        </li>
+        <li>
+          <a
+            href="https://apps.microsoft.com/detail/9nblggh3vrmz?hl=en-US&gl=US"
+            target="_blank"
+            ><span>Download on Microsoft Store (Windows)</span></a
+          >
+        </li>
+      </ul>
+      <button>Join my CO-OP 🤝</button>
+      <hr />
+      <p class="acknowledgments">This page was built by Mpho Modise</p>
+    </div>
+    <script>
+      function joinUser(){
+        let name = prompt("What is your name? ");
+        if(name === null || name.trim() === "") {
+          alert("Please enter your name!☹️");
+          return;
+        }
+
+        let createUserName = prompt("😁Create a username for the game: ");
+        if(createUserName === null || createUserName.trim() === "") {
+          alert(`Please enter your username ${name}!☹️`);
+          return;
+        }
+
+        let email = prompt("Please enter your email: ");
+        if(email === null || email.trim() === "") {
+          alert(`Please enter your email ${name}!☹️`);
+          return;
+        }
+
+        alert(`Thank you ${createUserName} 💌 for filling in your details! Here is my invite code 4MKVJS, see you there!😎`)
+        
+      }
+      let joinButton = document.querySelector("button");
+      joinButton.addEventListener("click", joinUser);
+    </script>
+  </body>
+</html>
